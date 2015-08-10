@@ -1,11 +1,11 @@
 <?php 
 
     $title   =  "Notification message";
-	$message =  htmlspecialchars($_POST['message']); 
+	$message =  htmlspecialchars($_POST['url']); 
 
 //echo 'The Residence Tunis Push notification \n';
 
-	$out = shell_exec("node push.js '".$message."'");
+	$out = shell_exec("node push-view.js '".$message."'");
 	?>
 	<script language="javascript">
 	/*
@@ -17,11 +17,11 @@
 
     } */
 
-	if(!confirm( "Broadcast text message has been processed.\n\n Do you want to send another message?")) {
-		document.location = 'index.html';
+	if(!confirm( "Broadcast url has been processed.\n\n Do you want to send another url?")) {
+		document.location = 'index.html'; 
 	}
 	else {
-	document.location = 'index.html#contact';
+	document.location = 'index.html#works'; 
 	}
 	
 	</script>
