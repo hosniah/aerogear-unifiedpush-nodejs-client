@@ -1,14 +1,12 @@
 var arg_push   = process.argv.slice(2);
 
 /* arg_title = JSON.stringify(arg_push[0]);*/
-arg_title =arg_push[0];
 
 
-console.log(arg_title);
-arg_message = arg_push[1];
+arg_message = arg_push[0];
 console.log(arg_message);
 
-var jsonObj = {'dest':'all','notification_type':'text','title':arg_title,'message':arg_message };
+var jsonObj = {'dest':'all','notification_type':'text','title':'Notification message','message':arg_message };
 console.log(JSON.stringify(jsonObj));
 
 var agSender = require( "unifiedpush-node-sender" ),
