@@ -1,11 +1,13 @@
-// print process.argv
-process.argv.forEach(function (val, index, array) {
-  console.log(index + ': ' + val);
-});
+var arg_push   = process.argv.slice(2);
 
-var arg_url = process.argv.slice(2);
-arg_url =   String(arg_url);
-console.log('Push view param: '+arg_url);
+/* arg_title = JSON.stringify(arg_push[0]);*/
+
+
+arg_message = arg_push[0];
+console.log(arg_message);
+
+var jsonObj = {'dest':'all','notification_type':'view','url':arg_message,'title':'Notification title' };
+console.log(JSON.stringify(jsonObj));
 
 var agSender = require( "unifiedpush-node-sender" ),
 	url= "https://aerogear-smartc.rhcloud.com/",
@@ -27,7 +29,7 @@ var agSender = require( "unifiedpush-node-sender" ),
 		};
 	*/
 	 message = {
-		alert: "{\"dest\":\"all\",\"notification_type\":\"view\",\"url\":arg_url,\"title\":\"notification title\" }",
+		alert: JSON.stringify(jsonObj),
 		title: "Title",
 		action: "Action",
 		sound: "default",
