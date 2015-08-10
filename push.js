@@ -1,12 +1,12 @@
 var agSender = require( "unifiedpush-node-sender" ),
-	url= "https://aerogear-xxxx.rhcloud.com/",
+	url= "https://aerogear-smartc.rhcloud.com/",
     message,
     settings;
 	
     settings = {
         
-        applicationID: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-        masterSecret:  "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        applicationID: "0fe0b749-8fd1-4689-9470-8b94fcb8f6cf",
+        masterSecret:  "b2eadc50-1d25-4820-a7df-961d67372a31"
     };
 	
 	/*
