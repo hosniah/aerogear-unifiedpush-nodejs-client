@@ -6,7 +6,7 @@
 
 //echo 'The Residence Tunis Push notification \n';
 
-	$out = shell_exec("node peruser-push.js '".$user."' '".$message."'");
+	$out = shell_exec("node peruser-push.js ".$user." '".$message."'");
 	?>
 	<script language="javascript">
 	/*
@@ -18,12 +18,10 @@
 
     } */
 
-	if(!confirm( "Broadcast text message has been processed.\n\n Do you want to send another message?")) {
+	if(!alert( "Broadcast text message has been processed to the right guest.\n\n")) {
 		document.location = 'index.html';
 	}
-	else {
-	document.location = 'index.html#contact';
-	}
+
 	
 	</script>
 <?php
