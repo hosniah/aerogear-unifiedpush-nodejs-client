@@ -27,8 +27,8 @@ var agSender = require( "unifiedpush-node-sender" ),
 		message:"message text"
 		};
 	*/
-	 message = {
-		alert: "{\"dest\":\"all\",\"notification_type\":\"text\",\"title\":arg_title,\"message\":arg_message}",
+	 message = {		
+		alert: "{\"dest\":\"all\",\"notification_type\":\"text\",\"title\":\"arg_title\",\"message\":JSON.stringify(arg_message)}",
 		title: "Title",
 		action: "Action",
 		sound: "default",
