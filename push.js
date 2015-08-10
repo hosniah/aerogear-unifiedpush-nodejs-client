@@ -1,3 +1,13 @@
+var arg_push   = process.argv.slice(2);
+
+/* arg_title = JSON.stringify(arg_push[0]);*/
+arg_title =arg_push[0];
+
+
+console.log(arg_title);
+arg_message = arg_push[1];
+console.log(arg_message);
+
 var agSender = require( "unifiedpush-node-sender" ),
 	url= "https://aerogear-smartc.rhcloud.com/",
     message,
@@ -18,7 +28,7 @@ var agSender = require( "unifiedpush-node-sender" ),
 		};
 	*/
 	 message = {
-		alert: "{\"dest\":\"all\",\"notification_type\":\"text\",\"title\":\"notification title\",\"message\":\"message text\"}",
+		alert: "{\"dest\":\"all\",\"notification_type\":\"text\",\"title\":arg_title,\"message\":arg_message}",
 		title: "Title",
 		action: "Action",
 		sound: "default",
