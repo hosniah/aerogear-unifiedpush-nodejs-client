@@ -1,12 +1,13 @@
 <?php 
 
     $title   =  "Notification message";
-	$message =  htmlspecialchars($_POST['message']); 
+	$message =  htmlspecialchars($_POST['url']); 
 	$user    =  htmlspecialchars($_POST['user']); 
+
 
 //echo 'The Residence Tunis Push notification \n';
 
-	$out = shell_exec("node peruser-push.js ".$user." '".$message."'");
+	$out = shell_exec("node peruser-push-view.js ".$user." ".$message." ");
 	?>
 	<script language="javascript">
 	/*
@@ -18,10 +19,9 @@
 
     } */
 
-	if(!alert( "Notification text message has been processed to the right guest.\n\n")) {
-		document.location = 'index.html';
+	if(!alert( "Notification url has been processed to the right guest. ")) {
+		document.location = 'index.html'; 
 	}
-
 	
 	</script>
 <?php
