@@ -1,6 +1,6 @@
 <?php 
 
-    $title   =  htmlspecialchars($_POST['title']); 
+    $title   =  "Notification message";
 	$message =  htmlspecialchars($_POST['message']); 
 
 //echo 'The Residence Tunis Push notification \n';
