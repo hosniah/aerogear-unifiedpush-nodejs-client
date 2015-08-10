@@ -8,11 +8,14 @@ console.log(arg_title);
 arg_message = arg_push[1];
 console.log(arg_message);
 
+var jsonObj = {'dest':'all','notification_type':'text','title':arg_title,'message':arg_message };
+console.log(JSON.stringify(jsonObj));
+
 var agSender = require( "unifiedpush-node-sender" ),
 	url= "https://aerogear-smartc.rhcloud.com/",
     message,
     settings;
-	
+
     settings = {
         
         applicationID: "0fe0b749-8fd1-4689-9470-8b94fcb8f6cf",
