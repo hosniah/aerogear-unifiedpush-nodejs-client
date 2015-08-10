@@ -36,13 +36,11 @@
 								<li class="gn-search-item">
 									<input placeholder="Search" type="search" class="gn-search">
 									<a class="gn-icon gn-icon-search"><span>Search</span></a>
-								</li>
-								<li>
-									<a href="#about" class="gn-icon gn-icon-download">About</a>
-								</li>
-								-->
-								<li><a href="#works" class="gn-icon gn-icon-archive">Broadcast URL</a></li>
+								</li>								-->
+								<li><a href="#about" class="gn-icon gn-icon-download">Per user text message</a></li>
 								<li><a href="#contact" class="gn-icon gn-icon-archive">Broadcast text message</a></li>
+								<li><a href="#about" class="gn-icon gn-icon-download">Per user URL</a></li>
+								<li><a href="#works" class="gn-icon gn-icon-archive">Broadcast URL</a></li>
 								<li><a href="admin.html" class="gn-icon gn-icon-cog">Instant messaging admin console</a></li>
 							</ul>
 						</div><!-- /gn-scroller -->
@@ -68,8 +66,72 @@
     </section>
 	<!-- /Section: intro -->
 
-	<!-- Section: about 
     <section id="about" class="home-section text-center bg-gray">
+		<div class="heading-contact marginbot-50">
+			<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="section-heading">
+					<h2>Per user text notification</h2>
+					<p>Send text messages to a specific user given his IM user</p>
+					</div>
+				
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-offset-2">
+            <div class="boxed-grey">
+                <form action="peruser-text-agent.php" id="contact-form" method="post">
+                <div class="row">
+				    <div class="col-lg-8">
+				        <div class="form-group">
+                            <label for="user">User:</label>
+                            <input type="text" class="form-control" id="user"  name="user"  placeholder="Enter the Instant Messaging username of a guest" required="required" />
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <label for="message"> Message</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Write your message here ..."></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-skin pull-right" id="btnContactUs">Send Message</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+			<br>
+			<div class="widget-contact row">
+				 <div class="col-lg-6">
+				<address>
+				  <strong>The Residence Tunis</strong><br>
+				  Boite Postale 697, 2070 La Marsa, Les Côtes de Carthage
+ <br>
+				  <abbr title="Phone">T:</abbr> (216) 71910 101
+				</address>
+				</div>
+				
+				<div class="col-lg-6">
+				<address>
+				  <strong>Email</strong><br>
+				  General Enquiries:<a href="mailto:info-tunis@theresidence.com">info-tunis@theresidence.com</a><br />
+				  Booking Enquiries:<a href="mailto:reservation-tunis@theresidence.com">reservation-tunis@theresidence.com</a>
+				</address>
+				</div>
+			</div>	
+        </div>
+
+    </div>	
+
+		</div>		
+	</section>
+	<!-- Section: about 
+
 		<div class="heading-about marginbot-50">
 			<div class="container">
 			<div class="row">
@@ -139,7 +201,6 @@
 	
 	<!-- Section: services -->
     <section id="service" class="home-section text-center">
-		
 
 		<div class="container">
 			<iframe class="" src="http://stackoverflow.com"></iframe>	
